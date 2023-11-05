@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="Trang chủ"><mat-icon>home</mat-icon>Trang chủ</a>
+    <a mat-button [matMenuTriggerFor]="ThoiSuMenu" routerLink="Thời sự">Thời sự</a>
+    <mat-menu #ThoiSuMenu="matMenu" yPosition="above">
+      <button mat-menu-item>Hôm nay</button>
+      <button mat-menu-item>Ngày mai</button>
+    </mat-menu>
+    <a mat-button [matMenuTriggerFor]="GiaiTriMenu" routerLink="Giải trí">Giải trí</a>
+    <mat-menu #GiaiTriMenu="matMenu" yPosition="above">
+      <button mat-menu-item>xem phim</button>
+      <button mat-menu-item>chơi game</button>
+    </mat-menu>
+    <a mat-button [matMenuTriggerFor]="KinhdoanhMenu" routerLink="Kinh doanh">Kinh doanh</a>
+    <mat-menu #KinhdoanhMenu="matMenu" yPosition="above">
+      <button mat-menu-item>chứng khoáng</button>
+      <button mat-menu-item>online</button>
+    </mat-menu>
+    <a mat-button [matMenuTriggerFor]="LamdepMenu" routerLink="Làm đẹp">Làm đẹp</a>
+    <mat-menu #LamdepMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="vertebrates">Làm</button>
+    </mat-menu>
+    
+    <mat-menu #vertebrates="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="Fishes">Makeup</button>
+      <button mat-menu-item >làm trắng</button>
+      <button mat-menu-item>nâng mũi</button>
+      <button mat-menu-item>nâng ngực</button>
+    </mat-menu>
+
+    <mat-menu #Fishes="matMenu">
+      <button mat-menu-item>Mi mắt</button>
+      <button mat-menu-item>đánh nền</button>
+      <button mat-menu-item>son</button>
+      <button mat-menu-item>gắn mi</button>
+    </mat-menu>
+    
+    <a mat-button routerLink="Tâm sự">Tâm sự</a>
+    <div class="spacer"></div>
+    <a mat-raised-button color="accent" routerLink="Đăng nhập">Đăng nhập</a>
+  </mat-toolbar>
